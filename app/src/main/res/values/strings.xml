@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Planeta Verde</string>
+    <string name="PLANETA_VERDE">PLANETA VERDE</string>
+    <string name="login">Login</string>
+    <string name="RecordarUsuario">Recordar Usuario</string>
+    <string name="olvideContraseña">Olvidé contraseña</string>
+    <string name="Registrarme">Registrarme</string>
+    <string name="Ingresar">Ingresar</string>
+    <string name="register">Registro</string>
+    <string name="totalRecicle">Reciclaje Total</string>
+    <string name="acumulado">Acumulado:</string>
+    <string name="ganancia">Ganancia:</string>
+    <string name="reciclar">Reciclar</string>
+    <string name="estadistica">Estadísticas</string>
+    <string name="categorias">CATEGORIAS</string>
+    <string name="plastico">Plástico</string>
+    <string name="carton">Cartón</string>
+    <string name="vidrio">Vidrio</string>
+    <string name="metal">Metal</string>
+    <string name="tecno">Tecnología</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="gananciaInser">Ganancia</string>
+    <string name="lugarCambios">Lugar de cambio</string>
+    <string name="fecha">Fecha</string>
+    <string name="cancel">Cancelar</string>
+    <string name="recolectar">RECOLECTAR</string>
+
+</resources>

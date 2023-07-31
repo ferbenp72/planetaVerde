@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="botonesAceptar" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/greenApp</item>
+        <item name="strokeColor">@color/greenApp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+    <style name="botonesCancel" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/cancelColor</item>
+        <item name="strokeColor">@color/greenApp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+</resources>

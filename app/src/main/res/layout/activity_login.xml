@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:background="@color/fondoApp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".LoginActivity">
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="50dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/logoPlanetaVerde"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logoplanetaverdebig" />
+
+        <TextView
+            android:id="@+id/planetaVerde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PLANETA_VERDE"
+            android:textColor="#FDF9F9"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/logoPlanetaVerde"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/RegisterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/login"
+        android:textColor="@color/greenApp"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="40dp" />
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:background="@drawable/textbox"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/usernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:ems="100"
+            android:paddingStart="10dp"
+            android:hint="usuario-correo-celular"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:background="@drawable/textbox"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:paddingStart="10dp"
+            android:background="@null"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/rememberUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordarUsuario" />
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="10dp" />
+
+    <CheckedTextView
+        android:id="@+id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/olvideContraseña"
+        android:textAllCaps="false"
+        android:textColor="#0E74C5"
+        android:typeface="normal" />
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/ingresarBoton"
+        style="@style/botonesAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Ingresar"/>
+
+    <Space
+        android:layout_width="200dp"
+        android:layout_height="20dp" />
+
+    <CheckedTextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/Registrarme"
+        android:textColor="#0E74C5" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
