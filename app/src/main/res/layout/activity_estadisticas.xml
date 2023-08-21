@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoApp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".EstadisticasActivity">
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_margin="25dp"
+        android:gravity="center"
+        android:background="@drawable/text_box_float"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/reciclajeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:text="@string/estadistica"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/plasticoEstadistica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="@string/plastico" />
+
+            <TextView
+                android:id="@+id/barraPlastico"
+                android:layout_width="204dp"
+                android:minWidth="204dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@null"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textoPlasticoTotal"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="textStart"
+                    android:text="@string/total" />
+                <TextView
+                    android:id="@+id/plasticoTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:text="@string/cero" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/cartonEstadistica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="@string/carton" />
+
+            <TextView
+                android:id="@+id/barraCarton"
+                android:layout_width="204dp"
+                android:minWidth="204dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@null"
+                android:textColor="@color/yellow"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textoCartonTotal"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="textStart"
+                    android:text="@string/total" />
+                <TextView
+                    android:id="@+id/cartonTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:text="@string/cero" />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/vidrioEstadistica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:text="@string/vidrio" />
+
+                <TextView
+                    android:id="@+id/barraVidrio"
+                    android:layout_width="204dp"
+                    android:minWidth="204dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="@null"
+                    android:textColor="@color/green"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textoVidrioTotal"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textStart"
+                        android:text="@string/total" />
+                    <TextView
+                        android:id="@+id/vidrioTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textEnd"
+                        android:text="@string/cero" />
+                </LinearLayout>
+                <Space
+                    android:layout_width="204dp"
+                    android:layout_height="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/metalEstadistica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:text="@string/metal" />
+
+                <TextView
+                    android:id="@+id/barraMetal"
+                    android:layout_width="204dp"
+                    android:minWidth="204dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="@null"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textoMetalTotal"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textStart"
+                        android:text="@string/total" />
+                    <TextView
+                        android:id="@+id/metalTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textEnd"
+                        android:text="@string/cero" />
+                </LinearLayout>
+                <Space
+                    android:layout_width="204dp"
+                    android:layout_height="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/tecnoEstadistica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:text="@string/tecno" />
+
+                <TextView
+                    android:id="@+id/barraTecno"
+                    android:layout_width="204dp"
+                    android:minWidth="204dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="@null"
+                    android:textColor="@color/pink"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textoTecnoTotal"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textStart"
+                        android:text="@string/total" />
+                    <TextView
+                        android:id="@+id/tecnoTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textEnd"
+                        android:text="@string/cero" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/greenApp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icon_home" />
+
+        <ImageView
+            android:id="@+id/icon_recicler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icon_recicler_menu" />
+
+        <ImageView
+            android:id="@+id/icon_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/consejos" />
+
+        <ImageView
+            android:id="@+id/icon_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/account_box" />
+    </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -177,6 +177,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/textbox"
             android:gravity="center"
+            android:text="@null"
             android:orientation="horizontal">
 
             <EditText
@@ -225,7 +226,11 @@
                 android:textAlignment="center"
                 android:textColor="@color/greenApp"
                 android:textSize="30sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType= "text" />
+
         </LinearLayout>
     </LinearLayout>
 

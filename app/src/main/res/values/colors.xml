@@ -5,4 +5,10 @@
     <color name="greenApp">#11620a</color>
     <color name="fondoApp">#A5BAA3</color>
     <color name="cancelColor">#929292</color>
+    <color name="redError">#DD2200</color>
+    <color name="blue">#3939C5</color>
+    <color name="red">#B8213F</color>
+    <color name="yellow">#BAA51B</color>
+    <color name="green">#30ED06</color>
+    <color name="pink">#DE06ED</color>
 </resources>

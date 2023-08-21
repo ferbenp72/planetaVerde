@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.planeta_verde.models.Recolector;
+import com.example.planeta_verde.models.Users;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -27,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
 
     TextView fechaActual;
     View categorias;
+    View estadisticaLayout;
     ImageView icon_home;
     ImageView icon_recicler;
     ImageView icon_info;
@@ -42,10 +44,13 @@ public class HomeActivity extends AppCompatActivity {
         fechaActual = findViewById(R.id.fechaAhora);
         fechaActual.setText(dateNow());
         categorias = findViewById(R.id.categorias);
+        estadisticaLayout = findViewById(R.id.estadisticaLayout);
+
 
         Intent LoginPage = new Intent(this, LoginActivity.class);
         Intent categoryPage = new Intent(this, CategoryActivity.class);
         Intent homePage = new Intent(this, HomeActivity.class);
+        Intent statisticsPage = new Intent(this, EstadisticasActivity.class);
         icon_home = findViewById(R.id.icon_home);
         icon_recicler = findViewById(R.id.icon_recicler);
         icon_info = findViewById(R.id.icon_info);
@@ -54,9 +59,9 @@ public class HomeActivity extends AppCompatActivity {
         total_en_cantidad = findViewById(R.id.ganacias);
 
         //Traer los datos del archivo txt
-        File recolectorFile = new File(getFilesDir(),"recolectorData.txt");
+        File recolectorFile = new File(getFilesDir(), Users.getActiveUser()+"-recolectorData.txt");
 
-        List<Recolector> listaCompleta = readFile(recolectorFile);
+        List<Recolector> listaCompleta = Recolector.readFile(recolectorFile);
 
         if(!listaCompleta.isEmpty()){
             Log.i("lista",listaCompleta.get(0).getCategoria());
@@ -122,6 +127,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(categoryPage);
                 finish();
 
+            }
+        });
+
+        estadisticaLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(statisticsPage);
+                finish();
             }
         });
 

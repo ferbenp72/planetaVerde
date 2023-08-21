@@ -3,20 +3,29 @@ package com.example.planeta_verde;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.planeta_verde.models.Recolector;
+import com.example.planeta_verde.models.Users;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class RecyclerActivity extends AppCompatActivity {
     //Declaracion de variables
@@ -32,6 +41,7 @@ public class RecyclerActivity extends AppCompatActivity {
     EditText ganancia;
     EditText lugar;
     EditText fecha;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +70,18 @@ public class RecyclerActivity extends AppCompatActivity {
 
         String categorias = getIntent().getStringExtra("categoria");
         setCategories(categorias);
+
+
+
+        // Inicializar selector de fecha
+        fecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarDatePickerDialog();
+
+            }
+        });
+
 
         //Ingresar valores
         ingresar.setOnClickListener(new View.OnClickListener() {
@@ -129,7 +151,8 @@ public class RecyclerActivity extends AppCompatActivity {
     }
 
     public void saverRecolecter(Recolector recolector){
-        File file = new File(getFilesDir(),"recolectorData.txt");
+
+        File file = new File(getFilesDir(), Users.getActiveUser()+"-recolectorData.txt");
         try {
             FileWriter writer = new FileWriter(file,true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -144,6 +167,42 @@ public class RecyclerActivity extends AppCompatActivity {
 
 
     }
+
+    //////
+    private void mostrarDatePickerDialog(){
+
+        Calendar cal = Calendar.getInstance(); // Fecha actual
+
+        DatePickerDialog datePicker = new DatePickerDialog(this,
+                new DatePickerDialog.OnDateSetListener() {
+
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                        // Establecer fecha cuando se selecciona
+                        cal.set(Calendar.YEAR, year);
+                        cal.set(Calendar.MONTH, month);
+                        cal.set(Calendar.DAY_OF_MONTH, day);
+
+                        // Establecer en EditText
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                        fecha.setText(sdf.format(cal.getTime()));
+                    }
+
+                },
+
+                // Valores iniciales
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH),
+                cal.get(Calendar.DAY_OF_MONTH)
+        );
+
+        datePicker.show();
+
+    }
+
+
+    /////
+
 
 
     public void setCategories(String categorias){
